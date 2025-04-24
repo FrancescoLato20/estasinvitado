@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Quicksand:wght@300..700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=League+Script&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url('../assets/decoIX.png'), url('../assets/decoDX.png');
+    background-position: left center, right center;
+    background-repeat: repeat-y, repeat-y;
+    *background-size: contain;
+    background-size: 400px auto;
+}
+
+.cabecera h1 {
+    margin: 6rem 0 3rem 0;
+    text-align: center;
+    font-family: "Quicksand", cursive;
+    color: rgb(52, 52, 52);
+    font-size: clamp(2rem, 15vw, 5rem); /* Mínimo 2rem, ajusta con 8vw, máximo 5rem */
+}
+
+.frase {
+    display: flex;
+    justify-content: center;
+}
+
+.frase p {
+    text-align: center;
+    font-family: "League Script", sans-serif;
+    font-size: clamp(1.5rem, 2vw, 3rem);
+}
+
+.audio audio{
+    display: block;
+    margin: auto;
+}
+
+.audio {
+    text-align: center;
+    margin: 5rem 0;
+}
+
+.image {
+    text-align: center;
+    margin-top: 3rem;
+}
+
+.image img{
+    max-width: 100%;
+    height: auto;
+}
+
+hr {
+    width: 50%; /* Ancho del <hr> */
+    margin: 3rem auto; /* 20px de espacio arriba y abajo, centrado horizontalmente */
+    border: none;
+    height: 1px; /* Grosor de la línea */
+    background-color: #919191; /* Color de la línea */
+}
+
+.cuentaAtras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    font-family: "Quicksand", sans-serif;
+}
+
+.cuentaAtras h2 {
+    font-size: clamp(1.1rem, 4vw, 3rem);
+}
+
+#contador p {
+    font-size: clamp(1.1rem, 4vw, 3rem);
+    color: rgb(229, 142, 103);
+}
+
+#guardarFecha {
+    background: lightblue;
+    border: none;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 2px 2px 3px  rgb(52, 52, 52, 0.2);
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.programa h2 {
+    text-align: center;
+    margin: 6rem 0 3rem 0;
+    font-family: "Quicksand", sans-serif;
+    font-size: clamp(1.5rem, 8vw, 4rem);
+    color: rgb(229, 142, 103);
+}
+
+.programa img {
+    width: 80%;
+    max-width: 400px;
+    min-width: 200px;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+.direccion {
+    text-align: center;
+    padding: 1rem;
+    font-family: "Quicksand", sans-serif;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+}
+
+.direccion a {
+    text-decoration: none;
+    color: rgb(229, 142, 103);
+}
+
+
+
+
+
+/*MEDIA QUERY*/
+
+@media (max-width: 768px) {
+    body {
+        background-position: -50px center, calc(100% + 50px) center;
+        background-size: 250px auto; /* Opcional: reducir tamaño si se ven muy grandes en móvil */
+    }
+
+    .frase p {
+        padding: 0 1.5rem; /* o prueba con 2rem si lo quieres más amplio */
+    }
+}
+
+/*section donde dormir*/
+
+.alojamiento {
+    text-align: center;
+    margin: 5rem auto;
+    padding: 2rem;
+}
+
+.alojamiento h2 {
+    font-family: "League Script", sans-serif;
+    font-size: 3rem;
+    color: rgb(229, 142, 103);
+    margin-bottom: 1rem;
+}
+
+.alojamiento-texto {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.hoteles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hotel-card {
+    border: 2px solid rgb(229, 142, 103);
+    padding: 1.5rem;
+    width: 250px;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.hotel-card h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.hotel-card a {
+    color: rgb(229, 142, 103);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.hotel-card a:hover {
+    text-decoration: underline;
+}
+
+/* section confirmacion asistencia*/
+.rsvp {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: rgba(255, 250, 246, 0.85);
+}
+
+.rsvp-titulo {
+    font-family: "League Script", cursive;
+    font-size: 3.2rem;
+    color: rgb(229, 142, 103);
+    margin-bottom: 1rem;
+}
+
+.rsvp-descripcion {
+    font-size: 1.2rem;
+    font-family: "Segoe UI", sans-serif;
+    color: #444;
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    line-height: 1.6;
+}
+
+.boton-rsvp {
+    display: inline-block;
+    background-color: rgb(229, 142, 103);
+    color: white;
+    padding: 0.9rem 2.2rem;
+    border-radius: 30px;
+    font-size: 1.1rem;
+    font-family: "Segoe UI", sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.boton-rsvp:hover {
+    background-color: rgb(200, 115, 80);
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+

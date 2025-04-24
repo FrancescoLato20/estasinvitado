@@ -1,0 +1,134 @@
+
+
+.ceremonia {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.ceremonia h2{
+    text-align: center;
+    margin: 5rem 0 3rem 0;
+    font-family: "League Script", sans-serif;
+    font-size: 3rem;
+}
+
+.carousel-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.carousel {
+    display: flex;
+    scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    width: 500px; /* 🎯 Cambia esto según tu diseño (ej. 500px o 80vw) */
+    max-width: 90vw;
+    scroll-behavior: smooth;
+    border: 20px solid rgb(229, 142, 103);
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    position: relative;
+}
+
+.carousel::-webkit-scrollbar {
+    display: none;
+}
+
+.carousel img {
+    width: 100%;
+    flex: 0 0 100%;
+    scroll-snap-align: center;
+    object-fit: cover;
+    height: auto;
+}
+
+
+  /*Flechas*/
+  .carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.7);
+    border: none;
+    font-size: 3rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 0.5rem 1rem;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    color: rgb(229, 142, 103);
+}
+.carousel-btn:hover {
+    background-color: rgba(255, 255, 255, 1);
+}
+.carousel-btn.left {
+    left: calc(25% - 20px); /* ajustado al borde izquierdo del carrusel */
+}
+
+.carousel-btn.right {
+    right: calc(25% - 20px); /* ajustado al borde derecho del carrusel */
+}
+
+.contenedor-mapa {
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center; /* Centra el contenido verticalmente */
+    *height: 100vh; /* Asegura que el contenedor ocupe toda la altura de la ventana */
+    margin-top: 2rem; /* Elimina el margen por defecto */
+}
+
+.mapa {
+    width: 100%;
+    position: relative;
+    max-width: 500px; /* Ancho fijo de 500px */
+    height: auto;
+    *margin: 2rem; 
+    border: 20px solid rgb(229, 142, 103);
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 500px;
+    border: none; /* Elimina cualquier borde por defecto del iframe */
+}
+
+
+/*MEDIA QUERY*/
+
+@media (max-width: 768px) {
+    .contenedor-mapa {
+        height: auto; /* Quita la altura fija que rompe el layout */
+    }
+
+    .mapa {
+        width: 90vw;
+        max-width: 90vw;
+        aspect-ratio: 1 / 1; /* 🔲 Esto lo hace perfectamente cuadrado */
+        margin: 0.2rem auto; /* Centrado como el carrusel */
+        border: 20px solid rgb(229, 142, 103);
+    }
+
+    .mapa iframe {
+        height: 100%;
+        width: 100%;
+    }
+
+    .carousel-btn.left {
+        left: calc(10% - 20px); /* ajustado al borde izquierdo del carrusel */
+    }
+    
+    .carousel-btn.right {
+        right: calc(10% - 20px); /* ajustado al borde derecho del carrusel */
+    }
+    
+}
+
+
+
+
+
