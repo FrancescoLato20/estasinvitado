@@ -14,6 +14,10 @@
     box-sizing: border-box;
 }
 
+html, body {
+    overflow-x: hidden;
+  }
+
 body {
     background-image: url('../assets/decoIX.png'), url('../assets/decoDX.png');
     background-position: left center, right center;
@@ -25,29 +29,29 @@ body {
 /*boton pausa musica*/
 #toggle-audio {
     position: fixed;
-    bottom: 20px;
-    right: 20px;
+    bottom: 1.5rem;
+    right: 1rem; /* en lugar de 20px */
+    z-index: 9999;
     background-color: rgb(229, 142, 103);
     border: none;
     border-radius: 50%;
     width: 48px;
     height: 48px;
-    padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    z-index: 999;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: background-color 0.3s ease;
-}
-#toggle-audio:hover {
-    background-color: rgb(200, 115, 80);
-}
-#toggle-audio svg {
-    width: 24px;
-    height: 24px;
-}
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 0;
+  }
+
+  #toggle-audio svg {
+    width: 20px;
+    height: 20px;
+    display: block;
+  }
+  
+  
 
 
 /*fin boton*/

@@ -1,15 +1,20 @@
 const botonAudio = document.getElementById("toggle-audio");
 const musica = document.getElementById("musica");
+const icono = document.getElementById("icon-audio");
 
 botonAudio.addEventListener("click", () => {
-    if (musica.paused) {
-        musica.play();
-        botonAudio.textContent = "🔊";
-    } else {
-        musica.pause();
-        botonAudio.textContent = "🔇";
-    }
+  if (musica.paused) {
+    musica.play();
+    icono.innerHTML = `<polygon points="5 3 5 21 19 12 5 3" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>`;
+  } else {
+    musica.pause();
+    icono.innerHTML = `
+      <rect x="6" y="4" width="4" height="16" stroke="white" stroke-width="2" />
+      <rect x="14" y="4" width="4" height="16" stroke="white" stroke-width="2" />
+    `;
+  }
 });
+
 
 const fechaEvento = new Date("2026-06-01T00:00:00").getTime();
 
