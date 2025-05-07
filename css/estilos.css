@@ -4,6 +4,10 @@
 
 @import url('https://fonts.googleapis.com/css2?family=League+Script&display=swap');
 
+@import url('https://fonts.googleapis.com/css2?family=Petit+Formal+Script&display=swap');
+
+
+
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +21,36 @@ body {
     *background-size: contain;
     background-size: 400px auto;
 }
+
+/*boton pausa musica*/
+#toggle-audio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: rgb(229, 142, 103);
+    border: none;
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 999;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: background-color 0.3s ease;
+}
+#toggle-audio:hover {
+    background-color: rgb(200, 115, 80);
+}
+#toggle-audio svg {
+    width: 24px;
+    height: 24px;
+}
+
+
+/*fin boton*/
 
 .cabecera h1 {
     margin: 6rem 0 3rem 0;
@@ -33,7 +67,7 @@ body {
 
 .frase p {
     text-align: center;
-    font-family: "League Script", sans-serif;
+    font-family: "Petit Formal Script", sans-serif;
     font-size: clamp(1.5rem, 2vw, 3rem);
 }
 
@@ -78,19 +112,26 @@ hr {
     font-size: clamp(1.1rem, 4vw, 3rem);
 }
 
+.cuentaAtras h3 {
+    font-family: "Petit Formal Script", sans-serif;
+    font-size: 2rem;
+    color: rgb(229, 142, 103);
+}
+
 #contador p {
     font-size: clamp(1.1rem, 4vw, 3rem);
     color: rgb(229, 142, 103);
 }
 
 #guardarFecha {
-    background: lightblue;
+    background: rgb(229, 142, 103);;
     border: none;
     padding: 1rem;
     border-radius: 0.8rem;
     box-shadow: 2px 2px 3px  rgb(52, 52, 52, 0.2);
     cursor: pointer;
     font-size: 1rem;
+    color: white;
 }
 
 .programa h2 {
@@ -123,22 +164,52 @@ hr {
     color: rgb(229, 142, 103);
 }
 
-
-
-
-
-/*MEDIA QUERY*/
-
-@media (max-width: 768px) {
-    body {
-        background-position: -50px center, calc(100% + 50px) center;
-        background-size: 250px auto; /* Opcional: reducir tamaño si se ven muy grandes en móvil */
-    }
-
-    .frase p {
-        padding: 0 1.5rem; /* o prueba con 2rem si lo quieres más amplio */
-    }
+.donde h3 {
+    font-family: "Quicksand", sans-serif;
+    color: rgb(229, 142, 103);
+    text-align: center;
+    margin-top: 2rem;
 }
+
+/* section iglesia */
+.iglesia {
+    text-align: center;
+    padding: 5rem 2rem;
+    background-color: rgba(255, 250, 246, 0.85);
+    color: #444;
+    font-family: "Segoe UI", sans-serif;
+}
+
+.iglesia h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 3rem;
+    color: rgb(229, 142, 103);
+    margin-bottom: 1rem;
+}
+
+.iglesia p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.imgIglesia {
+    display: flex;
+    justify-content: center;
+}
+
+.imgIglesia img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+    border: 6px solid rgb(229, 142, 103);
+    max-width: 500px;
+}
+
+.texto-iglesia {
+    font-family: "Quicksand", sans-serif;
+}
+/*fin iglesia*/
 
 /*section donde dormir*/
 
@@ -149,7 +220,7 @@ hr {
 }
 
 .alojamiento h2 {
-    font-family: "League Script", sans-serif;
+    font-family: "Petit Formal Script", sans-serif;
     font-size: 3rem;
     color: rgb(229, 142, 103);
     margin-bottom: 1rem;
@@ -200,7 +271,7 @@ hr {
 }
 
 .rsvp-titulo {
-    font-family: "League Script", cursive;
+    font-family: "Petit Formal Script", cursive;
     font-size: 3.2rem;
     color: rgb(229, 142, 103);
     margin-bottom: 1rem;
@@ -233,6 +304,82 @@ hr {
     background-color: rgb(200, 115, 80);
     transform: scale(1.05);
 }
+
+footer {
+    background-color: rgba(255, 250, 246, 0.85);
+    text-align: center;
+    padding: 4rem 2rem;
+    color: #444;
+    font-family: "Segoe UI", sans-serif;
+}
+
+footer h2 {
+    font-family: "Petit Formal Script", cursive;
+    font-size: 2rem;
+    color: rgb(229, 142, 103);
+    margin-bottom: 1rem;
+}
+
+footer p {
+    font-size: 1.5rem;
+    font-family: "Petit Formal Script", cursive;
+    margin: 0.3rem 0;
+}
+
+.fotoFinal {
+    margin-top: 2rem;
+}
+
+.fotoFinal img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.1);
+}
+
+
+
+
+
+
+/*MEDIA QUERY*/
+
+@media (max-width: 768px) {
+    body {
+        background-position: -50px center, calc(100% + 50px) center;
+        background-size: 250px auto; /* Opcional: reducir tamaño si se ven muy grandes en móvil */
+    }
+
+    .frase p {
+        padding: 0 1.5rem; /* o prueba con 2rem si lo quieres más amplio */
+    }
+}
+
+@media (max-width: 480px) {
+    .rsvp {
+      padding: 3rem 1rem;
+    }
+  
+    .rsvp-titulo {
+      font-size: 2.4rem;
+    }
+  
+    .rsvp-descripcion {
+      font-size: 1rem;
+      padding: 0 1rem;
+    }
+  
+    .boton-rsvp {
+      font-size: 1rem;
+      padding: 0.8rem 1.8rem;
+    }
+  }
+  
+
+
+
+
+
 
 
 

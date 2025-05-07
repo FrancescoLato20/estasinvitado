@@ -19,20 +19,26 @@
         </div>
     </header>
     <div class="audio">
-        <audio controls>
+        <audio id="musica" controls>
             <source src="assets/light-instrumental-melody-313329.mp3" type="audio/mpeg">
         </audio>
     </div>
 
+    <button id="toggle-audio" aria-label="Controlar música">
+        <svg id="icon-audio" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 5 21 19 12 5 3"></polygon>
+        </svg>
+      </button>
+
     
     <div class="image">
-        <img src="assets/pareja.jpg" alt="foto pareja">
+        <img src="assets/foto2.png" alt="foto pareja">
     </div>
 
     <hr>
 
     <section class="cuentaAtras">
-        <h3>1 de junio 2025</h3>
+        <h3>1 de junio 2026</h3>
         <h2>Cuenta atrás para el gran día:</h2>
         <div id="contador">
             <p id="reloj"></p>
@@ -47,8 +53,24 @@
         <img src="./assets/timeline.png" alt="">
     </section>
 
-    <section class="ceremonia">
+    <section class="iglesia">
         <h2>Ceremonia</h2>
+        <p class="texto-iglesia">Iglesia de Santa Marina
+            <br> Inicio a las 12h
+        </p>
+        <div class="imgIglesia">
+            <img src="./assets/iglesia.png" alt="">
+        </div>
+    </section>
+
+    <section class="ceremonia">
+        <h2>Celebración</h2>
+        <div class="direccion">
+            <h3>Hotel Finca Los Abetos</h3>
+            <p> Av. de San José de Calasanz, Km. 2, 8, Nte. Sierra, 14012 Córdoba</p>
+            <a href="https://www.hotelfincalosabetos.com/" target="_blank">Web</a>
+
+        </div>
         <div class="carousel-container">
             <button class="carousel-btn left">&#10094;</button>
             <div class="carousel">
@@ -59,14 +81,12 @@
             <button class="carousel-btn right">&#10095;</button>
         </div>
 
-        <div class="direccion">
-            <h3>Hotel Finca Los Abetos</h3>
-            <p> Av. de San José de Calasanz, Km. 2, 8, Nte. Sierra, 14012 Córdoba</p>
-            <a href="https://www.hotelfincalosabetos.com/">Web</a>
-
+        
+        <div class="donde">
+            <h3>Ubicación</h3>
         </div>
-
         <div class="contenedor-mapa">
+    
         <div class="mapa">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3147.1910320711927!2d-4.794473523638111!3d37.925967403435514!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd6cdf1737346c0f%3A0x21a15240d7423fd7!2sHotel%20Finca%20los%20Abetos!5e0!3m2!1ses!2ses!4v1743679101346!5m2!1ses!2ses" width="500" height="500" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
@@ -103,6 +123,15 @@
         <p class="rsvp-descripcion">Haz clic en el botón para confirmarnos si podrás acompañarnos en este día tan especial. ¡Tu presencia lo hace inolvidable! 💌</p>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSdnaQGnQvIV5JetAletd6kVBDv_43MdJm-Dia6l_Cxc5I5fiw/viewform?embedded=true" target="_blank" class="boton-rsvp">Confirmar asistencia</a>
     </section>
+
+    <footer>
+        <h2>Sin ti no sería<br> lo mismo</h2>
+        <p>Sandra y Pablo</p>
+        <p>1 de junio 2026</p>
+        <div class="fotoFinal">
+            <img src="./assets/Sin título-1.png" alt="">
+        </div>
+    </footer>
     
     
 

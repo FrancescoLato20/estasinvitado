@@ -1,4 +1,17 @@
-const fechaEvento = new Date("2025-06-01T00:00:00").getTime();
+const botonAudio = document.getElementById("toggle-audio");
+const musica = document.getElementById("musica");
+
+botonAudio.addEventListener("click", () => {
+    if (musica.paused) {
+        musica.play();
+        botonAudio.textContent = "🔊";
+    } else {
+        musica.pause();
+        botonAudio.textContent = "🔇";
+    }
+});
+
+const fechaEvento = new Date("2026-06-01T00:00:00").getTime();
 
 const intervalo = setInterval(function () {
     const ahora = new Date().getTime();
